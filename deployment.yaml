@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "hello"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "hello"
+        track: "release"
+    spec:
+      containers:
+        - name: "hello"
+          image: "roustem/hello-docker:1.0"
